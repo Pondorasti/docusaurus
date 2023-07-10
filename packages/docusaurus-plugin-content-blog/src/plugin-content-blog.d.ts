@@ -218,12 +218,24 @@ yarn workspace v1.22.19image` is a collocated image path, this entry will be the
      * Used in pagination. Generated after the other metadata, so not readonly.
      * Content is just a subset of another post's metadata.
      */
-    nextItem?: {readonly title: string; readonly permalink: string};
+    nextItem?: {
+      readonly title: string;
+      readonly permalink: string;
+      readonly authors: Author[];
+      readonly date: Date;
+      readonly formattedDate: string;
+    };
     /**
      * Used in pagination. Generated after the other metadata, so not readonly.
      * Content is just a subset of another post's metadata.
      */
-    prevItem?: {readonly title: string; readonly permalink: string};
+    prevItem?: {
+      readonly title: string;
+      readonly permalink: string;
+      readonly authors: Author[];
+      readonly date: Date;
+      readonly formattedDate: string;
+    };
     /**
      * Author metadata, normalized. Should be used in joint with
      * `assets.authorsImageUrls` on client side.

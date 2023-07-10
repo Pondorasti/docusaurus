@@ -132,6 +132,9 @@ export default async function pluginContentBlog(
           blogPost.metadata.prevItem = {
             title: prevItem.metadata.title,
             permalink: prevItem.metadata.permalink,
+            authors: prevItem.metadata.authors,
+            date: prevItem.metadata.date,
+            formattedDate: prevItem.metadata.formattedDate,
           };
         }
 
@@ -143,6 +146,9 @@ export default async function pluginContentBlog(
           blogPost.metadata.nextItem = {
             title: nextItem.metadata.title,
             permalink: nextItem.metadata.permalink,
+            authors: nextItem.metadata.authors,
+            date: nextItem.metadata.date,
+            formattedDate: nextItem.metadata.formattedDate,
           };
         }
       });
